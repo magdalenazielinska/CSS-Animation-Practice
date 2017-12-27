@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: grey;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: -600px;
+}
+
+.row_1 {
+    animation: show 2s 0s forwards, hideLeft 8s 18s linear forwards;
+}
+
+.row_2 {
+    animation: show 2s 2s forwards, hideRight 8s 18s linear forwards;
+}
+
+.row_3 {
+    animation: show 2s 4s forwards, hideLeft 8s 18s linear forwards;
+}
+
+.row_4 {
+    animation: show 2s 6s forwards, hideRight 8s 18s linear forwards;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.text_1 {
+    animation: textLeft 1s 9s forwards;
+}
+
+.text_2 {
+    animation: textLeft 1s 10s forwards;
+}
+
+.text_3 {
+    animation: textLeft 1s 11s forwards;
+}
+
+.text_4 {
+    animation: textLeft 1s 12s forwards;
+}
+
+.figure {
+    background-image: url('../images/sprite.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.star {
+    background-position: -100px -100px;
+    animation: figureRight 1s 9s forwards, changeStar 0s 14s forwards, rotateFigure 2s 18s linear infinite reverse;
+}
+
+.square {
+    background-position: 0 -100px;
+    animation: figureRight 1s 10s forwards, changeSquare 0s 15s forwards, rotateFigure 2s 18s linear infinite;
+}
+
+.hexagon {
+    background-position: -200px -100px;
+    animation: figureRight 1s 11s forwards, changeHexagon 0s 16s forwards, rotateFigure 2s 18s linear infinite reverse;
+}
+
+.circle {
+    background-position: -300px -100px;
+    animation: figureRight 1s 12s forwards, changeCircle 0s 17s forwards, rotateFigure 2s 18s linear infinite;
+}
+
+.words {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 350px;
+}
+
+.cheesecake {
+    font-family: "Pacifico", sans-serif;
+}
+
+.chocolate, .cheesecake {
+    font-weight: 600;
+    font-size: 0;
+    margin-bottom: 40px;
+    animation: wordsShow 5s 25s forwards, wordsRotate 2s 36s forwards, wordsNarrow 5s 39s forwards;
+}
+
+.sweet {
+    border: 1px solid black;
+    padding: 1px;
+    margin-bottom: 40px;
+    position: absolute;
+    top: -600px;
+    left: -100px;
+    animation: sweetShow 5s 30s forwards, wordsRotate 2s 36s forwards, wordsNarrow 5s 39s forwards;
+}
